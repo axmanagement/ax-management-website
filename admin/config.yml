@@ -1,0 +1,27 @@
+# GitHub 저장소 생성 후 아래 repo 값을 실제 소유자/저장소로 변경하세요.
+backend:
+  name: github
+  repo: axmanagement/ax-management-website
+  branch: main
+media_folder: images
+public_folder: /images
+site_url: https://axmanagement.netlify.app
+locale: ko
+collections:
+  - name: posts
+    label: 칼럼·인사이트
+    label_singular: 칼럼
+    folder: posts
+    create: true
+    delete: true
+    extension: md
+    format: frontmatter
+    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    fields:
+      - {label: 제목, name: title, widget: string}
+      - {label: 게시일, name: date, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ'}
+      - {label: 분야, name: category, widget: select, options: ['경제·금융', '일본·중국', 'AI·경영혁신', '인사·조직', '경영전략', '기타']}
+      - {label: 요약, name: description, widget: text, required: false}
+      - {label: 대표 사진, name: image, widget: image, required: false}
+      - {label: 공개, name: published, widget: boolean, default: true}
+      - {label: 본문, name: body, widget: markdown}
