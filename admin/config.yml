@@ -20,7 +20,7 @@ collections:
     fields:
       - {label: 제목, name: title, widget: string}
       - {label: 게시일, name: date, widget: datetime, format: 'YYYY-MM-DDTHH:mm:ssZ'}
-      - {label: 분야, name: category, widget: select, options: ['경제·금융', '일본·중국', 'AI·경영혁신', '인사·조직', '경영전략', '기타']}
+      - {label: 분야, name: category, widget: select, options: ['경제·금융', 'AI·경영혁신', 'ESG 경영', '인사·조직', '경영전략', '기타']}
       - {label: 요약, name: description, widget: text, required: false}
       - {label: 대표 사진, name: image, widget: image, required: false}
       - {label: 공개, name: published, widget: boolean, default: true}
